@@ -11,7 +11,7 @@ class MyCurlLibrary:
         self._site_name = ""
 
         self._current_dir = os.path.join(os.path.dirname(__file__), "..")
-        self._site_dir = os.join(self._current_dir, "site")
+        self._site_dir = os.path.join(self._current_dir, "site")
 
     @keyword("Request Page From Url")
     def request_page_from_url(self, desired_url):
@@ -48,3 +48,8 @@ def get_domain_name_from(url):
     url_no_https = re.sub(match_https, "", url)
     dn_from_url = re.sub(r"/", "", url_no_https)
     return dn_from_url
+
+
+# my_url = "https://klmp200.net/"
+# mycurl = MyCurlLibrary()
+# mycurl.request_page_from_url(my_url)

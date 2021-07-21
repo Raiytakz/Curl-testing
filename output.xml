@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210721 10:57:51.279" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="C:\Users\m.salaun\Documents\Curl-testing\tests.rst">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210721 11:10:02.569" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\m.salaun\Documents\Curl-testing\tests.robot">
 <test id="s1-t1" name="User requests a web page">
-<kw name="Request Page From Url">
+<kw name="Request Page From Url" library="MyCurlLibrary">
 <arg>https://klmp200.net/</arg>
-<msg timestamp="20210721 10:57:51.385" level="FAIL">No keyword with name 'Request Page From Url' found.</msg>
-<status status="FAIL" starttime="20210721 10:57:51.385" endtime="20210721 10:57:51.386"/>
+<status status="PASS" starttime="20210721 11:10:02.677" endtime="20210721 11:10:02.771"/>
 </kw>
-<kw name="Web Page Should Be Like">
+<kw name="Web Page Should Be Like" library="MyCurlLibrary">
 <arg>klmp200.html</arg>
-<status status="NOT RUN" starttime="20210721 10:57:51.387" endtime="20210721 10:57:51.387"/>
+<status status="PASS" starttime="20210721 11:10:02.772" endtime="20210721 11:10:02.773"/>
 </kw>
-<status status="FAIL" starttime="20210721 10:57:51.384" endtime="20210721 10:57:51.388">No keyword with name 'Request Page From Url' found.</status>
+<status status="PASS" starttime="20210721 11:10:02.675" endtime="20210721 11:10:02.774"/>
 </test>
-<status status="FAIL" starttime="20210721 10:57:51.279" endtime="20210721 10:57:51.390"/>
+<status status="PASS" starttime="20210721 11:10:02.575" endtime="20210721 11:10:02.776"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20210721 10:57:51.379" level="ERROR">Error in file 'C:\Users\m.salaun\Documents\Curl-testing\tests.rst' on line 2: Initializing library 'MyCurlLibrary' with no arguments failed: AttributeError: module 'os' has no attribute 'join'
-Traceback (most recent call last):
-  File "C:\Users\m.salaun\Documents\Curl-testing\library\MyCurlLibrary.py", line 14, in __init__
-    self._site_dir = os.join(self._current_dir, "site")</msg>
 </errors>
 </robot>
