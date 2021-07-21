@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210721 11:10:02.569" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210721 17:05:21.851" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="C:\Users\m.salaun\Documents\Curl-testing\tests.robot">
 <test id="s1-t1" name="User requests a web page">
-<kw name="Request Page From Url" library="MyCurlLibrary">
+<kw name="Request And Save Page From Url" library="MyCurlLibrary">
 <arg>https://klmp200.net/</arg>
-<status status="PASS" starttime="20210721 11:10:02.677" endtime="20210721 11:10:02.771"/>
+<status status="PASS" starttime="20210721 17:05:21.975" endtime="20210721 17:05:22.070"/>
 </kw>
-<kw name="Web Page Should Be Like" library="MyCurlLibrary">
-<arg>klmp200.html</arg>
-<status status="PASS" starttime="20210721 11:10:02.772" endtime="20210721 11:10:02.773"/>
+<kw name="Page Reference Should Exist" library="MyCurlLibrary">
+<status status="PASS" starttime="20210721 17:05:22.071" endtime="20210721 17:05:22.072"/>
 </kw>
-<status status="PASS" starttime="20210721 11:10:02.675" endtime="20210721 11:10:02.774"/>
+<kw name="Check Page Requested" library="MyCurlLibrary">
+<status status="PASS" starttime="20210721 17:05:22.072" endtime="20210721 17:05:22.073"/>
+</kw>
+<status status="PASS" starttime="20210721 17:05:21.975" endtime="20210721 17:05:22.074"/>
 </test>
-<status status="PASS" starttime="20210721 11:10:02.575" endtime="20210721 11:10:02.776"/>
+<status status="PASS" starttime="20210721 17:05:21.851" endtime="20210721 17:05:22.077"/>
 </suite>
 <statistics>
 <total>
