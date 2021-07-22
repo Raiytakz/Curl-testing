@@ -21,8 +21,8 @@ def test_request_success(mocker):
     FRR = FakeResquestResponse()
     FRR.status_code = 200
 
-    mocker.patch("MyCurlLibrary.io.open")
-    mocker.patch("MyCurlLibrary.requests.get", return_value=FRR)
+    mocker.patch("io.open")
+    mocker.patch("requests.get", return_value=FRR)
     spy_io_save = mocker.spy(MyCurlLibrary.io, "open")
 
     curlLibrary.request_and_save_page_from_url(page_url)
@@ -34,8 +34,8 @@ def test_request_success(mocker):
 def test_no_reference_page(mocker):
     page_url = global_page_url
 
-    mocker.patch("MyCurlLibrary.io.open")
-    mocker.patch("MyCurlLibrary.os.path.exists", side_effect=FileNotFoundError)
+    mocker.patch("io.open")
+    mocker.patch("os.path.exists", side_effect=FileNotFoundError)
     spy_os_path = mocker.spy(MyCurlLibrary.os.path, "exists")
 
     try:
@@ -51,7 +51,7 @@ def test_no_reference_page(mocker):
 def test_page_requested_different_from_reference(mocker):
     page_url = global_page_url
 
-    mocker.patch("MyCurlLibrary.io.open")
+    mocker.patch("io.open")
     mocker.patch("MyCurlLibrary.get_content_of_path", side_effect=[True, False])
 
     curlLibrary.request_and_save_page_from_url(page_url)
@@ -69,8 +69,8 @@ def test_page_not_found(mocker):
     FRR = FakeResquestResponse()
     FRR.status_code = 404
 
-    mocker.patch("MyCurlLibrary.io.open")
-    mocker.patch("MyCurlLibrary.requests.get", return_value=FRR)
+    mocker.patch("io.open")
+    mocker.patch("requests.get", return_value=FRR)
     spy_io_save = mocker.spy(MyCurlLibrary.io, "open")
 
     try:
